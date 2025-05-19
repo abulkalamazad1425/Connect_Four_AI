@@ -160,9 +160,9 @@
                 <div class="difficulty-option" th:each="level : ${difficultyLevels}">
                     <input type="radio" name="difficulty"
                            th:id="'difficulty-' + ${level.key}"
-                           th:value="${level.key == 'Easy' ? 3 :
-                     (level.key == 'Medium' ? 4 :
-                     (level.key == 'Hard' ? 5 : 6))}"
+                           th:value="${level.key == 'Easy' ? 1 :
+                     (level.key == 'Medium' ? 3 :
+                     (level.key == 'Hard' ? 5 : 7))}"
                            th:checked="${level.key == 'Medium'}">
                     <label th:for="'difficulty-' + ${level.key}" th:text="${level.key}"></label>
                     <div class="difficulty-description">
