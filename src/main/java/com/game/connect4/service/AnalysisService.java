@@ -62,7 +62,6 @@ public class AnalysisService {
         summary.append("Game Summary\n");
         summary.append("============\n\n");
 
-        // Game status
         summary.append("Result: ");
         switch (game.getStatus()) {
             case PLAYER_WIN:
@@ -80,16 +79,16 @@ public class AnalysisService {
         }
         summary.append("\n\n");
 
-        // Difficulty level
+
         summary.append("Difficulty: ").append(getDifficultyName(game.getDifficultyLevel())).append("\n\n");
 
-        // Number of moves
+
         List<Move> moves = game.getBoard().getMoveHistory();
         summary.append("Total moves: ").append(moves.size()).append("\n");
         summary.append("Player moves: ").append(moves.size() / 2 + moves.size() % 2).append("\n");
         summary.append("AI moves: ").append(moves.size() / 2).append("\n\n");
 
-        // Move analysis
+
         summary.append("Move Analysis\n");
         summary.append("------------\n");
         List<String> analyses = game.getGameAnalysis();
@@ -97,7 +96,7 @@ public class AnalysisService {
             summary.append(analysis).append("\n");
         }
 
-        // Overall assessment
+
         summary.append("\nOverall Assessment\n");
         summary.append("-----------------\n");
 

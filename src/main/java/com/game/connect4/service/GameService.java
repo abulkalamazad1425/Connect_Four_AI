@@ -18,7 +18,7 @@ public class GameService {
     private final AIService aiService;
     private final AnalysisService analysisService;
 
-    // In-memory storage for game sessions
+
     private final Map<String, Game> games = new HashMap<>();
 
     @Autowired
@@ -48,7 +48,6 @@ public class GameService {
 
         int row = game.makeMove(column);
 
-        // If the game is still in progress and it's the AI's turn, analyze the player's move
         if (row != -1 && game.getStatus() == GameStatus.IN_PROGRESS) {
             analyzePlayerMove(game, column);
         }
